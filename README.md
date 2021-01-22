@@ -1,2 +1,2 @@
 # project
-first
+first gitHub project
