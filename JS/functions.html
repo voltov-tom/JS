@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+		function numbers(n) {	//получаем переменную
+			for (var i = 0; i != n;){
+				i++;
+				array.push(i);	//кладем в массив
+			}
+		}
+
+	var array = [];	//создаем пустой массив
+	numbers(+prompt("массив скольких чисел нужно создать? :"));	//вводим переменную
+	alert(array);	//выводим на экран
+
+	array = [];	//очищаем массив для следующей функции 
+
+
+		function getRandomNumber(max){	//массив рандомных чисел длинной мах
+			while (array.length < max){
+				var rand = Math.round(Math.random() * max);
+				array.push(rand);
+			}
+			return max;	//что-бы не стирался при выходе из ф-и
+		}
+
+	var max = getRandomNumber( +prompt("Генерируем массив c случайными числами от 0 до :"));
+	alert(array);
+
+	var result = array.reduce(	
+
+		function summOfNumbers(sum, current){	//сумма элементов в массиве	
+  		return sum + current;
+		});
+	
+	alert("Сумма чисел массиве = " + result);	//выводим на экран
+
+	var array = [];	//очищаем массив для следующей функции 
+
+
+	var max = getRandomNumber( +prompt("Генерируем массив c случайными числами от 0 до :"));
+	alert(array);
+
+		function getMaxNumber(numArray) {	//максимальное число массива
+			return result =  Math.max.apply(null, numArray);
+		}
+
+	getMaxNumber(array);
+	alert("Максимальное число массива " + result);
+
+	var array = [];	//очищаем массив для следующей функции 
+
+
+	var max = getRandomNumber( +prompt("Генерируем массив c случайными числами от 0 до :"));
+	alert(array);
+
+		function getMinNumber(numArray) {	//минимальное число массива
+			return result =  Math.min.apply(null, numArray);
+		}
+
+	getMinNumber(array);
+	alert("Минимальное число массива " + result);
+
+	var array = [];	//очищаем массив для следующей функции 
+
+
+	var max = getRandomNumber( +prompt("Генерируем массив c случайными числами от 0 до :"));
+	alert(array);
+
+		var evenNumbers = array.filter(
+			function(number) {	//только четные числа массива
+		  		return number % 2 == 0;
+		});
+
+	alert("Четные числа из данного массива: " + evenNumbers); 
+
+</script>

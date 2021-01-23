@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var contr = +prompt("Введите сумму вклада, RUB");
+	percent = +prompt("Введите желаемую процентную ставку, %"); //проценты в процентах:)
+	percent =  percent * 0.01;
+
+	for (var i = 1; i <= 5; i++) {
+		contr = contr + (contr * percent);
+		document.write(i + " год: " + contr.toFixed(2) + " RUB<br />");
+	}
+	alert("Через 5 лет на вашем вкладе будет: \n" + contr + " RUB" );
+
+</script>

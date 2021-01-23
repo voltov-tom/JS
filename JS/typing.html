@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function generateText(letters, length){
+		
+		var text = "";
+		for(var i = 0; i < length; i++){
+			var n = getRandomNumber(letters.length - 1);
+			text = text + letters[n];
+		}
+			return text;
+	}
+
+	function getRandomNumber(max){
+		var rand = Math.round(Math.random() * max);
+		return rand;
+	}
+
+	function typing(letter1, letter2){
+		while (true){	
+			alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев\nТеперь неспеша набирайте текст, постарайтесь не смотреть на клавиатуру");
+			var max = 2;//две буквы
+			var text = generateText([letter1, letter2], 10);
+			var userText = prompt(text);
+			if(userText == text){
+				alert("Верно!");
+				break;
+
+			} else {
+				alert("Неверно!, еще раз.")
+			}
+		}
+	}
+
+	alert("Вас приветствует программа по обучению слепому набору текста.");
+	typing("ф", "а");
+
+	alert("Следующий уровень!");
+	typing("ы", "в");
+
+	alert("Следующий уровень!");
+	typing("о", "ж");
+	alert("Вы научились!");
+	
+</script>

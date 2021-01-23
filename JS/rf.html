@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function recursiveFactorial(n) {
+		if(n == 0)
+			return 1;	
+
+		else
+			return recursiveFactorial(n - 1) * n;
+	}
+	
+	var n
+	var rf = recursiveFactorial(+prompt(n));
+	alert(rf);
+
+</script>

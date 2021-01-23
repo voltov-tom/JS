@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random() * 100);
+	alert("Компьютер загадал число от 0 до 100, играют два игрока по очереди, кто первый угадает, того и победа.\nДля выхода введите не число.");
+	var user1Answer = parseInt(101); //костыль, чтобы не вылетела ошибка в 10 строке
+	var user2Answer = parseInt(101); //костыль, чтобы не вылетела ошибка в 10 строке
+	
+
+		for (var tryCount = 1; answer != user1Answer || answer != user2Answer; tryCount ++){
+
+			user1Answer = +prompt("Игрок №1, введите число: ");
+
+			  if ((isNaN(user1Answer)) || (user1Answer < 0)){
+				alert("Конец!\n" + "Загаданное число: " + answer + ".");
+				break;
+			}	
+			if (user1Answer < answer){
+				user1Answer = +alert ("Введенное число " + user1Answer + " меньше загаданного, ходит игрок №2. \n" +  "Использованно попыток: " + tryCount);
+			}		
+			if (user1Answer > answer){
+				user1Answer = +alert ("Введенное число " + user1Answer + " больше загаданного, ходит игрок №2. \n" +  "Использованно попыток: " + tryCount);
+
+			}				
+			if (answer == user1Answer){
+				alert("Выиграл игрок №1!");
+				break;
+			}
+			var user2Answer = +prompt("Игрок №2, введите число: ");
+
+			  if ((isNaN(user2Answer)) || (user2Answer < 0)){
+				alert("Конец!\n" + "Загаданное число: " + answer + ".");
+				break;
+			}
+			if (user2Answer < answer){
+				user1Answer = +alert ("Введенное число " + user2Answer + " меньше загаданного, ходит игрок №1. \n" +  "Использованно попыток: " + tryCount);
+			}
+			if (user2Answer > answer){
+				user1Answer = +alert ("Введенное число " + user2Answer + " больше загаданного, ходит игрок №1. \n" +  "Использованно попыток: " + tryCount);
+			}
+			if (answer == user2Answer){
+				alert("Выиграл игрок №2!");
+				break;
+
+			} 
+		}	
+	
+</script>

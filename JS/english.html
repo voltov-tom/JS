@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function askForWords(words){
+
+		while (words.length != 0){ 
+			var i = parseInt(Math.random() * (words.length));
+			var userTranslate = prompt("Превод слова: " + words[i][0]);
+			if userTranslate == words[i][1]{
+				alert ("Супер");
+				words.splice(i,1);
+			} else {
+				alert("Правильный перевод: " + words[i][1]);
+			}
+		}
+	}	
+
+		var easywords = [
+			["dog", "собака"],
+			["cat", "кот"],
+			["good", "хорошо"],
+			["bad", "плохо"],
+			["light", "свет"]
+		];
+	askForWords(easywords);
+
+	alert("Теперь слова по-сложнее");
+
+		var hardWords = [
+			["chainsaw", "бензопила"],
+			["castle", "замок"],
+			["cow", "корова"],
+			["bottom", "дно"],
+			["sewerage", "канализация"]
+		];
+	
+	askForWords(hardWords);
+
+	alert("Всё!");
+
+</script>

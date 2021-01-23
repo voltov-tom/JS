@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+	
+	var password = "";
+	function passGen(){
+		var len = readInt()
+		var symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	    for (var i = 0; i < len; i++){
+	        password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
+	    }
+		document.getElementById("button").style.visibility = "hidden";
+		document.getElementById("output").value = password;
+
+	}
+
+	function readInt(){
+		return +document.getElementById("len").value;
+	}
+
+	function copy() {
+ 	  	var copyText = document.getElementById("output");
+			copyText.select();
+			document.execCommand("copy");
+			document.getElementById("button1").innerText = "В буфере";
+	}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="passGen.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+			<h1>Генератор случайного, сложного пароля</h1>
+			<div class="box">
+				<p>Введите длину генеруруемого пароля:</p>
+				<input type="number" id="len">
+				<br>
+				<input type="text" id="output">
+				<br>
+				<a href="#" onClick="passGen();" id="button">Сгенерировать</a>
+				<a href="#" onClick="copy();" id="button1">Копировать</a>
+			</div>
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright 2020 &copy; Timofey Voltov
+<div>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function getRandomNumber(max){	//массив рандомных чисел длинной мах
+		while (array.length < max){
+				var rand = Math.round(Math.random() * max);
+				array.push(rand);
+		}
+	}
+	var array = []; 
+	var max = getRandomNumber( +prompt("Генерируем массив c случайными числами от 0 до :"));
+		alert(array);
+
+	var positiveArr = array.filter(function(number) {
+	  return number % 2 == 0;
+	});
+
+	alert( positiveArr ); 
+</script>
