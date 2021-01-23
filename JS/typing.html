@@ -16,11 +16,11 @@
 		return rand;
 	}
 
-	function typing(letter1, letter2){
+	function typing(letter1, letter2, letter3, letter4){
 		while (true){	
+			var max = prompt("Сколько разных букв хотите тренировать?");
 			alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев\nТеперь неспеша набирайте текст, постарайтесь не смотреть на клавиатуру");
-			var max = 2;//две буквы
-			var text = generateText([letter1, letter2], 10);
+			var text = generateText([letter1, letter2, letter3, letter4], max);
 			var userText = prompt(text);
 			if(userText == text){
 				alert("Верно!");
@@ -33,13 +33,13 @@
 	}
 
 	alert("Вас приветствует программа по обучению слепому набору текста.");
-	typing("ф", "а");
+	typing("ф", "а","в", "ы");
 
 	alert("Следующий уровень!");
-	typing("ы", "в");
+	typing("й", "а","к", "ы");
 
 	alert("Следующий уровень!");
-	typing("о", "ж");
+	typing("й", "я","к", "с");
 	alert("Вы научились!");
 	
 </script>
